@@ -55,17 +55,6 @@ public: //accessory Methods
 public:	
 	// Sets default values for this actor's properties
 	ANaveEnemiga();
-	//UPROPERTY()
-	// bool RotateToFaceOutwards;//indica la direccion de rotacion
-
-	//UPROPERTY()
-	// float RotationSpeed;//numero de grados que gira en cada Tick
-
-	//UPROPERTY()
-	// float OrbitDistance;//a que distancia se movera de su origen
-
-	// float CurrentValue;//posicion de rotacion acu
-
 
 protected:
 	// Called when the game starts or when spawned
