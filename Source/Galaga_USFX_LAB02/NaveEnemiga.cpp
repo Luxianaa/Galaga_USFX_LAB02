@@ -2,6 +2,9 @@
 
 
 #include "NaveEnemiga.h"
+#include "Components/StaticMeshComponent.h"
+#include "UObject/ConstructorHelpers.h"
+#include "Engine/StaticMesh.h"
 
 // Sets default values
 ANaveEnemiga::ANaveEnemiga()
@@ -11,6 +14,8 @@ ANaveEnemiga::ANaveEnemiga()
 	mallaNaveEnemiga = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	mallaNaveEnemiga->SetupAttachment(RootComponent);
 	RootComponent = mallaNaveEnemiga;
+	
+
 }
 
 // Called when the game starts or when spawned
