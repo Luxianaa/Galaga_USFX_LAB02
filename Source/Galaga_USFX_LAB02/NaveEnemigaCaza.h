@@ -49,6 +49,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	//Herencia de NaveEnemiga
 	virtual void Mover(float DeltaTime);
 	
 };

@@ -6,7 +6,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "Galaga_USFX_LAB02GameMode.generated.h"
 
-class ANAveENemiga;
+class ANaveEnemiga;
 class ANaveEnemigaCaza;
 
 UCLASS(MinimalAPI)
@@ -23,6 +23,8 @@ protected:
 public:
 	//TArray<ANaveEnemiga*> TANavesEnemigas;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
+	
+	TMap<FString,ANaveEnemiga*> DiferenciaNaves;
 
 };
 

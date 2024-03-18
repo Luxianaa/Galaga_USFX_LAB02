@@ -9,13 +9,15 @@ AGalaga_USFX_LAB02GameMode::AGalaga_USFX_LAB02GameMode()
 {
 	// set default pawn class to our character class
 	DefaultPawnClass = AGalaga_USFX_LAB02Pawn::StaticClass();
+
+
 }
 
 void AGalaga_USFX_LAB02GameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FVector ubicacionInicialNaves = FVector(80.0f, 200.0f, 200.f);
+	FVector ubicacionInicialNaves = FVector(10.0f, -20.0f, 200.f);
 	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
 
 	UWorld* const World = GetWorld();
@@ -26,8 +28,12 @@ void AGalaga_USFX_LAB02GameMode::BeginPlay()
 			ubicacionActual = FVector(ubicacionActual.X, ubicacionActual.Y + 300.0f + i, ubicacionActual.Z);
 			ANaveEnemigaCaza* NaveEnemigaCazaActual = World->SpawnActor<ANaveEnemigaCaza>(ubicacionActual, rotacionNave);
 			TANavesEnemigasCaza.Add(NaveEnemigaCazaActual);
-		}
 
+			DiferenciaNaves.Add("Nave01", NaveEnemigaCazaActual);
+			DiferenciaNaves["Nave01"]->SetVelocidad(100);
+
+
+		}
 	}
 }
 

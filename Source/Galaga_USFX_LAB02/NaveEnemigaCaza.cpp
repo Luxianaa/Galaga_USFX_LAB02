@@ -5,7 +5,7 @@
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Props/MaterialSphere.MaterialSphere'"));
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
 }
 
@@ -27,11 +27,11 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
 	Angulo += Speed * DeltaTime;
 
 	// Calcula las nuevas posiciones en x y y
-	float NewX = GetActorLocation().X + Radio * FMath::Cos(Angulo)* DeltaTime;
-	float NewY = GetActorLocation().Y + Radio * FMath::Sin(Angulo)* DeltaTime;
+	float NuevaX = GetActorLocation().X + Radio * FMath::Cos(Angulo)* DeltaTime;
+	float NuevaY = GetActorLocation().Y + Radio * FMath::Sin(Angulo)* DeltaTime;
 
 	// Establece la nueva posición
-	FVector NewLocation = FVector(NewX, NewY, GetActorLocation().Z);
+	FVector NewLocation = FVector(NuevaX, NuevaY, GetActorLocation().Z);
 	SetActorLocation(NewLocation);
 }
 
