@@ -65,7 +65,7 @@ public:
 	// float OrbitDistance;//a que distancia se movera de su origen
 
 	// float CurrentValue;//posicion de rotacion acu
- 
+
 
 protected:
 	// Called when the game starts or when spawned

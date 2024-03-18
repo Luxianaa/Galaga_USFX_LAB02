@@ -19,6 +19,9 @@ protected:
 	float tipoMunicion;
 	float tipoMovimiento;
 	float vida;
+	float Radio = 100.0f; // Radio de la circunferencia
+	float Angulo = 0.0f; // Ángulo inicial
+	float Speed = 6.0f; // Velocidad de rotación
 
 public:
 	FORCEINLINE float GetCantidadMunicion() const { return cantidadMunicion; }
@@ -38,6 +41,7 @@ public:
 	// Sets default values for this actor's properties
 	ANaveEnemigaCaza();
 
+
 	//UPROPERTY()
 	// bool RotateToFaceOutwards;//indica la direccion de rotacion
 
@@ -56,7 +60,7 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-public:
+
 	virtual void Mover(float DeltaTime);
 	
 };
